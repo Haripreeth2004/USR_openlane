@@ -1,0 +1,79 @@
+$date
+	Sat Oct  5 21:29:44 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module UAR_behav_8bit $end
+$var wire 1 ! clk $end
+$var wire 8 " d_in [7:0] $end
+$var wire 2 # select [1:0] $end
+$var reg 8 $ q [7:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx $
+b0 #
+b0 "
+1!
+$end
+#5000
+0!
+#10000
+b11 #
+b10101010 "
+1!
+#15000
+0!
+#20000
+b10 #
+b10101010 $
+1!
+#25000
+0!
+#30000
+b1 #
+b1010100 $
+1!
+#35000
+0!
+#40000
+b0 #
+b101010 $
+1!
+#45000
+0!
+#50000
+b11 #
+b11001010 "
+1!
+#55000
+0!
+#60000
+b10 #
+b11001010 $
+1!
+#65000
+0!
+#70000
+b1 #
+b10010100 $
+1!
+#75000
+0!
+#80000
+b0 #
+b1001010 $
+1!
+#85000
+0!
+#90000
+1!
+#90001

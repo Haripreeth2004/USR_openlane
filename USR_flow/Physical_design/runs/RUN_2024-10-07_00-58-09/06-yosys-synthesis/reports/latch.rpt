@@ -1,0 +1,3 @@
+
+16. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mux_4to1.\q' from process `\mux_4to1.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2'.

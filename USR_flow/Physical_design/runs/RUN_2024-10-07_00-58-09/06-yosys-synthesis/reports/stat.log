@@ -1,0 +1,24 @@
+63. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 17
+   Number of wire bits:             24
+   Number of public wires:           8
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 17
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__buf_2          4
+     sky130_fd_sc_hd__dfxtp_2        4
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_1         2
+     sky130_fd_sc_hd__mux4_2         2
+     sky130_fd_sc_hd__nor2_2         1
+
+   Chip area for module '\UAR_4bit': 208.950400
+

@@ -1,0 +1,7 @@
+{
+    "DESIGN_NAME": "UAR_4bit",
+    "VERILOG_FILES": ["/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR_4bit.v", "/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v", "/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v"],
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "clk"
+    
+  }

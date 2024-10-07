@@ -1,0 +1,45 @@
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib ",
+   "modules": {
+      "\\UAR_4bit": {
+         "num_wires":         26,
+         "num_wire_bits":     33,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_DFFE_PP_": 4,
+            "$_MUX_": 3,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4
+         }
+      }
+   },
+      "design": {
+         "num_wires":         26,
+         "num_wire_bits":     33,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_DFFE_PP_": 4,
+            "$_MUX_": 3,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4
+         }
+      }
+}
+

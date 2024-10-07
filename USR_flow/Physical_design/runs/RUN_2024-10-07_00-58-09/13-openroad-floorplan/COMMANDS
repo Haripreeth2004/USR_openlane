@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/13-openroad-floorplan/or_metrics_out.json /nix/store/11lf70a6548fk8k8r7bhf3g67j6mhpjp-python3-3.11.9-env/lib/python3.11/site-packages/openlane/scripts/openroad/floorplan.tcl

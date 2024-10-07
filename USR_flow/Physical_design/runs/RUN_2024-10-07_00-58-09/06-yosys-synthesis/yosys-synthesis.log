@@ -1,0 +1,1085 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
+
+Loaded SDC plugin
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Liberty frontend: /home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR_4bit.v
+Parsing SystemVerilog input from `/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR_4bit.v' to AST representation.
+Generating RTLIL representation for module `\UAR_4bit'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v
+Parsing SystemVerilog input from `/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v' to AST representation.
+Generating RTLIL representation for module `\UAR'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v
+Parsing SystemVerilog input from `/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v' to AST representation.
+Generating RTLIL representation for module `\mux_4to1'.
+Successfully finished Verilog frontend.
+
+5. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+Used module:     \UAR
+Used module:         \mux_4to1
+
+5.2. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+Used module:     \UAR
+Used module:         \mux_4to1
+Removed 0 unused modules.
+Renaming module UAR_4bit to UAR_4bit.
+
+6. Generating Graphviz representation of design.
+Writing dot description to `/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/06-yosys-synthesis/hierarchy.dot'.
+Dumping module UAR_4bit to page 1.
+
+7. Executing TRIBUF pass.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+Used module:     \UAR
+Used module:         \mux_4to1
+
+8.2. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+Used module:     \UAR
+Used module:         \mux_4to1
+Removed 0 unused modules.
+
+9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2 in module mux_4to1.
+Marked 1 switch rules as full_case in process $proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2 in module mux_4to1.
+Removed a total of 1 dead cases.
+
+11. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 2 assignments to connections.
+
+12. Executing PROC_INIT pass (extract init attributes).
+
+13. Executing PROC_ARST pass (detect async resets in processes).
+
+14. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+15. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\UAR.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v:23$1'.
+Creating decoders for process `\mux_4to1.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2'.
+     1/1: $1\q[0:0]
+
+16. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\mux_4to1.\q' from process `\mux_4to1.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2'.
+
+17. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\UAR.\q' using process `\UAR.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v:23$1'.
+  created $dff cell `$procdff$8' with positive edge clock.
+
+18. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+19. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `UAR.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/UAR.v:23$1'.
+Found and cleaned up 1 empty switch in `\mux_4to1.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2'.
+Removing empty process `mux_4to1.$proc$/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/struct_design/mux_4to1.v:10$2'.
+Cleaned up 1 empty switch.
+
+20. Executing CHECK pass (checking for obvious problems).
+Checking module UAR_4bit...
+Checking module UAR...
+Checking module mux_4to1...
+Found and reported 0 problems.
+
+21. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+Optimizing module UAR.
+Optimizing module mux_4to1.
+<suppressed ~1 debug messages>
+
+22. Executing FLATTEN pass (flatten design).
+Deleting now unused module UAR.
+Deleting now unused module mux_4to1.
+<suppressed ~5 debug messages>
+
+23. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+25. Executing OPT pass (performing simple optimizations).
+
+25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+<suppressed ~36 debug messages>
+Removed a total of 12 cells.
+
+25.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+25.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+25.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+25.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+25.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+25.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+25.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+25.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+25.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+25.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+25.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+25.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+25.16. Finished OPT passes. (There is nothing left to do.)
+
+26. Executing FSM pass (extract and optimize FSM).
+
+26.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+26.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+26.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+26.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+26.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+26.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+26.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+27. Executing OPT pass (performing simple optimizations).
+
+27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+27.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+27.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+27.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+27.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\bit3.$procdff$8 ($dff) from module UAR_4bit (D = \bit3.d_mux_out, Q = \bit3.q).
+Adding EN signal on $flatten\bit2.$procdff$8 ($dff) from module UAR_4bit (D = \bit2.d_mux_out, Q = \bit2.q).
+Adding EN signal on $flatten\bit1.$procdff$8 ($dff) from module UAR_4bit (D = \bit1.d_mux_out, Q = \bit1.q).
+Adding EN signal on $flatten\bit0.$procdff$8 ($dff) from module UAR_4bit (D = \bit0.d_mux_out, Q = \bit0.q).
+
+27.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+27.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+<suppressed ~8 debug messages>
+
+27.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+27.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+27.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+    New ctrl vector for $pmux cell $flatten\bit0.\mux.$procmux$3: { $flatten\bit0.\mux.$procmux$6_CMP $flatten\bit0.\mux.$procmux$5_CMP $flatten\bit0.\mux.$procmux$4_CMP }
+    New ctrl vector for $pmux cell $flatten\bit1.\mux.$procmux$3: { $flatten\bit0.\mux.$procmux$6_CMP $flatten\bit0.\mux.$procmux$5_CMP $flatten\bit0.\mux.$procmux$4_CMP }
+    New ctrl vector for $pmux cell $flatten\bit2.\mux.$procmux$3: { $flatten\bit0.\mux.$procmux$6_CMP $flatten\bit0.\mux.$procmux$5_CMP $flatten\bit0.\mux.$procmux$4_CMP }
+    New ctrl vector for $pmux cell $flatten\bit3.\mux.$procmux$3: { $flatten\bit0.\mux.$procmux$6_CMP $flatten\bit0.\mux.$procmux$5_CMP $flatten\bit0.\mux.$procmux$4_CMP }
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 4 changes.
+
+27.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+27.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+27.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+27.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+27.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+27.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+27.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+27.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+27.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+27.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+27.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+27.23. Finished OPT passes. (There is nothing left to do.)
+
+28. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell UAR_4bit.$flatten\bit0.\mux.$procmux$6_CMP0 ($eq).
+
+29. Executing PEEPOPT pass (run peephole optimizers).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+31. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module UAR_4bit:
+  created 0 $alu and 0 $macc cells.
+
+32. Executing SHARE pass (SAT-based resource sharing).
+
+33. Executing OPT pass (performing simple optimizations).
+
+33.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+33.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+33.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+33.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+33.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+33.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+33.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+33.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+33.9. Finished OPT passes. (There is nothing left to do.)
+
+34. Executing MEMORY pass.
+
+34.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+34.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+34.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+34.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+34.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+34.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+34.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+34.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+34.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+34.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+35. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+36. Executing OPT pass (performing simple optimizations).
+
+36.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+<suppressed ~4 debug messages>
+
+36.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+36.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+36.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+36.5. Finished fast OPT passes.
+
+37. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+38. Executing OPT pass (performing simple optimizations).
+
+38.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+38.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+38.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+38.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+38.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+38.6. Executing OPT_SHARE pass.
+
+38.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+38.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+38.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+38.10. Finished OPT passes. (There is nothing left to do.)
+
+39. Executing TECHMAP pass (map to technology primitives).
+
+39.1. Executing Verilog-2005 frontend: /nix/store/sx2v0i73mn1ih2z1nk61pm9n5gjgpidy-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/sx2v0i73mn1ih2z1nk61pm9n5gjgpidy-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+39.2. Continuing TECHMAP pass.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~117 debug messages>
+
+40. Executing OPT pass (performing simple optimizations).
+
+40.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+<suppressed ~10 debug messages>
+
+40.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+40.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+40.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 1 unused cells and 55 unused wires.
+<suppressed ~2 debug messages>
+
+40.5. Finished fast OPT passes.
+
+41. Executing ABC pass (technology mapping using ABC).
+
+41.1. Extracting gate netlist of module `\UAR_4bit' to `<abc-temp-dir>/input.blif'..
+Extracted 22 gates and 33 wires to a netlist network with 10 inputs and 5 outputs.
+
+41.1.1. Executing ABC.
+Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+41.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:             ORNOT cells:        1
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:                OR cells:        4
+ABC RESULTS:            ANDNOT cells:        8
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:        internal signals:       18
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        5
+Removing temp directory.
+
+42. Executing OPT pass (performing simple optimizations).
+
+42.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+42.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+42.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+42.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 0 unused cells and 28 unused wires.
+<suppressed ~1 debug messages>
+
+42.5. Finished fast OPT passes.
+
+43. Executing HIERARCHY pass (managing design hierarchy).
+
+43.1. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+
+43.2. Analyzing design hierarchy..
+Top module:  \UAR_4bit
+Removed 0 unused modules.
+
+44. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 70
+   Number of wire bits:             85
+   Number of public wires:          56
+   Number of public wire bits:      71
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 22
+     $_ANDNOT_                       8
+     $_AND_                          1
+     $_DFFE_PP_                      4
+     $_MUX_                          3
+     $_NAND_                         1
+     $_ORNOT_                        1
+     $_OR_                           4
+
+45. Executing CHECK pass (checking for obvious problems).
+Checking module UAR_4bit...
+Found and reported 0 problems.
+
+46. Generating Graphviz representation of design.
+Writing dot description to `/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module UAR_4bit to page 1.
+
+47. Executing OPT pass (performing simple optimizations).
+
+47.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+47.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+47.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \UAR_4bit..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+47.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \UAR_4bit.
+Performed a total of 0 changes.
+
+47.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\UAR_4bit'.
+Removed a total of 0 cells.
+
+47.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+47.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+
+47.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module UAR_4bit.
+
+47.9. Finished OPT passes. (There is nothing left to do.)
+
+48. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 0 unused cells and 44 unused wires.
+<suppressed ~44 debug messages>
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib ",
+   "modules": {
+      "\\UAR_4bit": {
+         "num_wires":         26,
+         "num_wire_bits":     33,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_DFFE_PP_": 4,
+            "$_MUX_": 3,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4
+         }
+      }
+   },
+      "design": {
+         "num_wires":         26,
+         "num_wire_bits":     33,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         22,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_DFFE_PP_": 4,
+            "$_MUX_": 3,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4
+         }
+      }
+}
+
+49. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 26
+   Number of wire bits:             33
+   Number of public wires:          12
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 22
+     $_ANDNOT_                       8
+     $_AND_                          1
+     $_DFFE_PP_                      4
+     $_MUX_                          3
+     $_NAND_                         1
+     $_ORNOT_                        1
+     $_OR_                           4
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+
+mapping tbuf
+[INFO] Applying tri-state buffer mapping from '/home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'...
+
+50. Executing TECHMAP pass (map to technology primitives).
+
+50.1. Executing Verilog-2005 frontend: /home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+50.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+51. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'...
+
+52. Executing TECHMAP pass (map to technology primitives).
+
+52.1. Executing Verilog-2005 frontend: /home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/hari-the-geth/.volare/volare/sky130/versions/bdc9412b3e468c102d01b7cf6337be06ec6e9c9a/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+52.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+53. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+54. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+54.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\UAR_4bit':
+  mapped 4 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_2 cells.
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib ",
+   "modules": {
+      "\\UAR_4bit": {
+         "num_wires":         30,
+         "num_wire_bits":     37,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "area":              85.081600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_MUX_": 7,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4,
+            "sky130_fd_sc_hd__dfxtp_2": 4
+         }
+      }
+   },
+      "design": {
+         "num_wires":         30,
+         "num_wire_bits":     37,
+         "num_pub_wires":     12,
+         "num_pub_wire_bits": 19,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         26,
+         "area":              85.081600,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 8,
+            "$_AND_": 1,
+            "$_MUX_": 7,
+            "$_NAND_": 1,
+            "$_ORNOT_": 1,
+            "$_OR_": 4,
+            "sky130_fd_sc_hd__dfxtp_2": 4
+         }
+      }
+}
+
+55. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 30
+   Number of wire bits:             37
+   Number of public wires:          12
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 26
+     $_ANDNOT_                       8
+     $_AND_                          1
+     $_MUX_                          7
+     $_NAND_                         1
+     $_ORNOT_                        1
+     $_OR_                           4
+     sky130_fd_sc_hd__dfxtp_2        4
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\UAR_4bit': 85.081600
+
+[INFO] Using strategy "AREA 0"...
+
+56. Executing ABC pass (technology mapping using ABC).
+
+56.1. Extracting gate netlist of module `\UAR_4bit' to `/tmp/yosys-abc-KknSwK/input.blif'..
+Extracted 22 gates and 32 wires to a netlist network with 10 inputs and 4 outputs.
+
+56.1.1. Executing ABC.
+Running ABC command: "/nix/store/wq2q0njg3sx8wvj2akz7x1qxwyrv9xlr-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-KknSwK/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-KknSwK/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-KknSwK/input.blif 
+ABC: + read_lib -w /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.44 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.63 sec
+ABC: Memory =    9.54 MB. Time =     0.63 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/06-yosys-synthesis/synthesis.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/06-yosys-synthesis/synthesis.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + retime -D -D 25000 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drf -l 
+ABC: + balance 
+ABC: + drw -l 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + drf -l -z 
+ABC: + drw -l -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 25000 
+ABC: + &get -n 
+ABC: + &st 
+ABC: + &dch 
+ABC: + &nf 
+ABC: + &put 
+ABC: + 
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =      9 ( 11.1 %)   Cap = 11.2 ff ( 18.1 %)   Area =      103.85 ( 44.4 %)   Delay =   593.72 ps  ( 66.7 %)               
+ABC: Path  0 --       1 : 0    6 pi                      A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  24.6 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      22 : 6    1 sky130_fd_sc_hd__mux4_2 A =  22.52  Df = 593.7 -158.3 ps  S = 193.5 ps  Cin =  2.6 ff  Cout =  33.4 ff  Cmax = 301.2 ff  G = 1277  
+ABC: Start-point = pi0 (\select [1]).  End-point = po2 ($auto$rtlil.cc:2684:MuxGate$189).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   10/    4  lat =    0  nd =     9  edge =     31  area =103.85  delay = 2.00  lev = 2
+ABC: + write_blif /tmp/yosys-abc-KknSwK/output.blif 
+
+56.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__mux4_2 cells:        2
+ABC RESULTS:        internal signals:       18
+ABC RESULTS:           input signals:       10
+ABC RESULTS:          output signals:        4
+Removing temp directory.
+
+57. Executing SETUNDEF pass (replace undef values with defined constants).
+
+58. Executing HILOMAP pass (mapping to constant drivers).
+Warning: Selection "sky130_fd_sc_hd__conb_1" did not match any module.
+Warning: Selection "LO" did not match any object.
+
+59. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+60. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \UAR_4bit..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~5 debug messages>
+
+61. Executing INSBUF pass (insert buffer cells for connected wires).
+Add UAR_4bit/$auto$insbuf.cc:97:execute$202: \bit0.mux.d_hold -> \q [0]
+Add UAR_4bit/$auto$insbuf.cc:97:execute$203: \bit0.d_left -> \q [1]
+Add UAR_4bit/$auto$insbuf.cc:97:execute$204: \bit1.d_left -> \q [2]
+Add UAR_4bit/$auto$insbuf.cc:97:execute$205: \bit2.d_left -> \q [3]
+
+62. Executing CHECK pass (checking for obvious problems).
+Checking module UAR_4bit...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)",
+   "invocation": "stat -json -liberty /media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/Physical_design/runs/RUN_2024-10-07_00-58-09/tmp/92f16bed781c4ee6ae9752071abbedd0.lib ",
+   "modules": {
+      "\\UAR_4bit": {
+         "num_wires":         17,
+         "num_wire_bits":     24,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         17,
+         "area":              208.950400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21o_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 1,
+            "sky130_fd_sc_hd__and3_2": 1,
+            "sky130_fd_sc_hd__buf_2": 4,
+            "sky130_fd_sc_hd__dfxtp_2": 4,
+            "sky130_fd_sc_hd__inv_2": 1,
+            "sky130_fd_sc_hd__mux2_1": 2,
+            "sky130_fd_sc_hd__mux4_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         17,
+         "num_wire_bits":     24,
+         "num_pub_wires":     8,
+         "num_pub_wire_bits": 15,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         17,
+         "area":              208.950400,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a21o_2": 1,
+            "sky130_fd_sc_hd__a22o_2": 1,
+            "sky130_fd_sc_hd__and3_2": 1,
+            "sky130_fd_sc_hd__buf_2": 4,
+            "sky130_fd_sc_hd__dfxtp_2": 4,
+            "sky130_fd_sc_hd__inv_2": 1,
+            "sky130_fd_sc_hd__mux2_1": 2,
+            "sky130_fd_sc_hd__mux4_2": 2,
+            "sky130_fd_sc_hd__nor2_2": 1
+         }
+      }
+}
+
+63. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 17
+   Number of wire bits:             24
+   Number of public wires:           8
+   Number of public wire bits:      15
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 17
+     sky130_fd_sc_hd__a21o_2         1
+     sky130_fd_sc_hd__a22o_2         1
+     sky130_fd_sc_hd__and3_2         1
+     sky130_fd_sc_hd__buf_2          4
+     sky130_fd_sc_hd__dfxtp_2        4
+     sky130_fd_sc_hd__inv_2          1
+     sky130_fd_sc_hd__mux2_1         2
+     sky130_fd_sc_hd__mux4_2         2
+     sky130_fd_sc_hd__nor2_2         1
+
+   Chip area for module '\UAR_4bit': 208.950400
+
+64. Executing Verilog backend.
+Dumping module `\UAR_4bit'.
+
+65. Executing JSON backend.
+
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 9d1b94b791, CPU: user 6.90s system 0.24s, MEM: 54.50 MB peak
+Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
+Time spent: 47% 7x stat (4 sec), 18% 2x abc (1 sec), ...

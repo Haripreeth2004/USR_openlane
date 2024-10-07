@@ -1,0 +1,29 @@
+55. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 30
+   Number of wire bits:             37
+   Number of public wires:          12
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 26
+     $_ANDNOT_                       8
+     $_AND_                          1
+     $_MUX_                          7
+     $_NAND_                         1
+     $_ORNOT_                        1
+     $_OR_                           4
+     sky130_fd_sc_hd__dfxtp_2        4
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\UAR_4bit': 85.081600
+

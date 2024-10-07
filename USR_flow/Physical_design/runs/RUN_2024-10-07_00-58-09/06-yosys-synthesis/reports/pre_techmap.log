@@ -1,0 +1,28 @@
+49. Printing statistics.
+
+=== UAR_4bit ===
+
+   Number of wires:                 26
+   Number of wire bits:             33
+   Number of public wires:          12
+   Number of public wire bits:      19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 22
+     $_ANDNOT_                       8
+     $_AND_                          1
+     $_DFFE_PP_                      4
+     $_MUX_                          3
+     $_NAND_                         1
+     $_ORNOT_                        1
+     $_OR_                           4
+
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+

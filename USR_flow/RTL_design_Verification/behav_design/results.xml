@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1728143984" />
+    <testcase name="tb_UAR_coco" classname="tb_UAR_coco" file="/media/hari-the-geth/HPCORE/Openlane2_projects/USR_flow/RTL_design_Verification/behav_design/tb_UAR_coco.py" lineno="6" time="0.013021469116210938" sim_time_ns="90.001" ratio_time="6911.739312728871" />
+  </testsuite>
+</testsuites>
